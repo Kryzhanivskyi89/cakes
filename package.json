@@ -1,0 +1,22 @@
+{
+  "name": "cakes",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://Kryzhanivskyi89.github.io/cakes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url/cakes/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.0",
+    "parcel": "^2.10.0",
+    "posthtml-include": "^1.7.4"
+  },
+  "dependencies": {
+    "modern-normalize": "^2.0.0"
+  }
+}
