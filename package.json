@@ -2,7 +2,7 @@
   "name": "cakes",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://Kryzhanivskyi89.github.io/cakes",
+  "homepage": "https://kryzhanivskyi89.github.io/cakes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
