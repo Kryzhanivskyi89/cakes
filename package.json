@@ -17,6 +17,7 @@
     "posthtml-include": "^1.7.4"
   },
   "dependencies": {
+    "gh-pages": "^6.0.0",
     "modern-normalize": "^2.0.0"
   }
 }
