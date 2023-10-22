@@ -1,4 +1,3 @@
-@import "https://fonts.googleapis.com/css2?family=Poppins&display=swap";
 /*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 *, :before, :after {
   box-sizing: border-box;
@@ -121,10 +120,10 @@ summary {
 }
 
 :root {
+  --header-footer-bg: #98e0c2;
   --title-color-text: #2c2c2c;
   --link-activ-color: #bbf330;
   --button-color: #bbf330;
-  --header-footer-bg: #98e0c2;
   --maim-bg-color-and-border: #ffe550;
   --foter-text-color: #7eb101;
   --modal-eror-text: #fe6060;
@@ -134,7 +133,14 @@ summary {
 body {
   color: #2c2c2c;
   background-color: #fefefe;
+  grid-template-rows: 1fr 10rem auto;
+  grid-template-areas: "main"
+                       "."
+                       "footer";
+  min-height: 100vh;
   font-family: Roboto, sans-serif;
+  display: grid;
+  overflow-x: hidden;
 }
 
 body.modal-open {
@@ -276,8 +282,6 @@ img {
 .hero__container {
   justify-content: space-between;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
 }
 
@@ -305,28 +309,16 @@ img {
   }
 }
 
-body {
-  background: #f5f7fa;
-  grid-template-rows: 1fr 10rem auto;
-  grid-template-areas: "main"
-                       "."
-                       "footer";
-  min-height: 100vh;
-  font-family: Open Sans, sans-serif;
-  display: grid;
-  overflow-x: hidden;
-}
-
-body .footer {
+.footer {
   z-index: 1;
-  --footer-background: #ed5565;
+  --footer-background: var(--header-footer-bg);
   grid-area: footer;
   min-height: 12rem;
   display: grid;
   position: relative;
 }
 
-body .footer .bubbles {
+.footer .bubbles {
   background: var(--footer-background);
   filter: url("#blob");
   height: 1rem;
@@ -336,7 +328,7 @@ body .footer .bubbles {
   right: 0;
 }
 
-body .footer .bubbles .bubble {
+.footer .bubbles .bubble {
   left: var(--position, 50%);
   background: var(--footer-background);
   animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
@@ -345,7 +337,7 @@ body .footer .bubbles .bubble {
   transform: translate(-50%, 100%);
 }
 
-body .footer .content {
+.footer .content {
   z-index: 2;
   grid-gap: 4rem;
   background: var(--footer-background);
@@ -354,35 +346,35 @@ body .footer .content {
   display: grid;
 }
 
-body .footer .content a, body .footer .content p {
+.footer .content a, .footer .content p {
   color: #f5f7fa;
   text-decoration: none;
 }
 
-body .footer .content b {
+.footer .content b {
   color: #fff;
 }
 
-body .footer .content p {
+.footer .content p {
   margin: 0;
   font-size: .75rem;
 }
 
-body .footer .content > div {
+.footer .content > div {
   flex-direction: column;
   justify-content: center;
   display: flex;
 }
 
-body .footer .content > div > div {
+.footer .content > div > div {
   margin: .25rem 0;
 }
 
-body .footer .content > div > div > * {
+.footer .content > div > div > * {
   margin-right: .5rem;
 }
 
-body .footer .content > div .image {
+.footer .content > div .image {
   background-position: center;
   background-size: cover;
   align-self: center;
@@ -411,17 +403,6 @@ body .footer .content > div .image {
   100% {
     bottom: var(--distance, 10rem);
   }
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:focus, :active {
-  -webkit-tap-highlight-color: transparent;
-  outline: none !important;
 }
 
 .wrapper {
@@ -492,59 +473,92 @@ body .footer .content > div .image {
   background: #cd201f;
 }
 
-.container {
+.container__gallery {
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-  margin: 2rem;
   display: grid;
 }
 
-* {
-  font-family: Poppins, sans-serif;
-}
-
-.card {
-  border-radius: 8px;
-  grid-template-rows: 1fr 1fr;
-  height: 215px;
-  transition: all .8s cubic-bezier(.2, .8, .2, 1);
-  display: grid;
+.container__gallery .card {
+  cursor: pointer;
   position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 20px #00000040;
 }
 
-h3 {
-  color: #fff;
-  margin: 20px 0 0 20px;
-  font-size: 24px;
+.container__gallery .card .face {
+  transition: all .5s;
 }
 
-p {
+.container .card .face.face1 {
+  z-index: 1;
+  background: #333;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  transform: translateY(100px);
+}
+
+.container .card:hover .face.face1 {
+  background: #ff0057;
+  transform: translateY(0);
+}
+
+.container .card .face.face1 .content {
+  transition: all .5s;
+}
+
+.container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.container .card .face.face1 .content h3 {
   color: #fff;
-  letter-spacing: .5px;
-  align-self: end;
-  margin: 0 0 20px 20px;
-  font-size: 16px;
-  font-weight: 400;
+  text-align: center;
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+.container .card .face.face2 {
+  box-sizing: border-box;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  transform: translateY(-100px);
+  box-shadow: 0 20px 50px #000c;
+}
+
+.container .card:hover .face.face2 {
+  transform: translateY(0);
+}
+
+.container .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+}
+
+.container .card .face.face2 .content a {
+  color: #333;
+  border: 1px solid #333;
+  margin: 15px 0 0;
+  padding: 5px;
+  font-weight: 900;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container .card .face.face2 .content a:hover {
+  color: #fff;
+  background: #333;
 }
 
 img {
-  z-index: -1;
-  width: 100%;
+  width: 300px;
   height: 110%;
-  transition: all .8s cubic-bezier(.2, .8, .2, 1);
-  position: absolute;
   top: 0;
-}
-
-.card:hover {
-  transform: scale(1.035);
-  box-shadow: 0 15px 30px #00000080;
-}
-
-.card:hover img {
-  transform: translateY(-10px);
 }
 
 /*# sourceMappingURL=index.e378193d.css.map */

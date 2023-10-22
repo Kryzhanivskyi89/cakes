@@ -11,8 +11,6 @@
 .hero__container {
     display: flex;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     justify-content: space-between;
 
     @media screen and (max-width:767px) {

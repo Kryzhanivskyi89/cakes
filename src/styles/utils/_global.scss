@@ -1,7 +1,13 @@
 body {
     background-color: #FEFEFE;
     color: #2c2c2c;
-
+    display: grid;
+        grid-template-rows: 1fr 10rem auto;
+        grid-template-areas: "main" "." "footer";
+        overflow-x: hidden;
+      
+        min-height: 100vh;
+        
     font-family: "Roboto", sans-serif;
 }
 
