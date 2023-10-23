@@ -30,13 +30,13 @@
             <div class="navigation__wrap">
                 <ul class="navigation_list list">
                     <li class="navigation_item">
-                        <a class="navigation_link" href="">Про себе</a>
+                        <a class="navigation_link current" data-hover="About" href="">Про себе</a>
                     </li>
                     <li class="navigation_item">
-                        <a class="navigation_link" href="">Мої роботи</a>
+                        <a class="navigation_link" data-hover="Blog" href="">Мої роботи</a>
                     </li>
                     <li class="navigation_item">
-                        <a class="navigation_link" href="">Контакти</a>
+                        <a class="navigation_link" data-hover="Contact" href="">Контакти</a>
                     </li>
                 </ul>
                 
@@ -361,7 +361,26 @@
 </div> --></div>
             <section class="section">
     <div class="container">
-
+        <button type="button" data-start="">Start</button>
+        
+        <div class="timer">
+            <div class="field">
+                <span class="value" data-days="">00</span>
+                <!-- <span class="label">Days</span> -->
+            </div>
+            <div class="field">
+                <span class="value" data-hours="">00</span>
+                <!-- <span class="label">Hours</span> -->
+            </div>
+            <div class="field">
+                <span class="value" data-minutes="">00</span>
+                <!-- <span class="label">Minutes</span> -->
+            </div>
+            <div class="field">
+                <span class="value" data-seconds="">00</span>
+                <!-- <span class="label">Seconds</span> -->
+            </div>
+        </div>
     </div>
 </section>
 
@@ -695,5 +714,6 @@
 
 
 </body>
+    <script src="/index.975ef6c8.js" defer=""></script>
 </body>
 </html>

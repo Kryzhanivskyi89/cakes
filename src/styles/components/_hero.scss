@@ -1,4 +1,5 @@
 .hero {
+    margin-top: 100px;
     @media screen and (min-width:320px) {
         padding-top: 132px;
     }
@@ -9,6 +10,7 @@
 }
 
 .hero__container {
+    
     display: flex;
     align-items: center;
     justify-content: space-between;

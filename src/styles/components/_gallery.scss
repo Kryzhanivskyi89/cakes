@@ -130,6 +130,14 @@ img {
     width: 300px;
     // z-index: -1;
     // transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    @media screen and (min-width: 768px) {
+            width: 350px;
+        }
+    
+        @media screen and (max-width: 767px) {
+            width: 450px;
+        }
 }
 
 // .card:hover {
