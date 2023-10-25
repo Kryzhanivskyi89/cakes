@@ -1,12 +1,12 @@
 .footer {
-        z-index: 1;
-        
-        --footer-background: var(--header-footer-bg);
-        
-        display: grid;
-        position: relative;
-        grid-area: footer;
-        min-height: 12rem;
+    
+    --footer-background: var(--header-footer-bg);
+    
+    // z-index: 1;
+        // display: grid;
+        // position: relative;
+        // grid-area: footer;
+        // min-height: 12rem;
 
         .bubbles {
             position: absolute;

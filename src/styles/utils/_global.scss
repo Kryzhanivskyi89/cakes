@@ -3,12 +3,12 @@ body {
     width: 100%;
     background-color: #FEFEFE;
     color: #2c2c2c;
-    display: grid;
-        grid-template-rows: 1fr 10rem auto;
-        grid-template-areas: "main" "." "footer";
-        overflow-x: hidden;
+    // display: grid;
+    //     grid-template-rows: 1fr 10rem auto;
+    //     grid-template-areas: "header" "main" "footer";
+    //     overflow-x: hidden;
       
-        min-height: 100vh;
+    //     min-height: 100vh;
         
     font-family: "Roboto", sans-serif;
 }
@@ -51,7 +51,8 @@ ul {
 .container {
     margin-left: auto;
     margin-right: auto;
-
+    // min-width: 480px;
+   
     @media screen and (max-width: 767px) {
         max-width: 480px;
         padding-left: 20px;
