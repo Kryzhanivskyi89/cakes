@@ -13,16 +13,18 @@
   "license": "ISC",
   "dependencies": {
     "@parcel/core": "^2.10.0",
+    "axios": "^1.6.0",
     "flatpickr": "^4.6.13",
     "gh-pages": "^6.0.0",
-    "modern-normalize": "^2.0.0"
+    "modern-normalize": "^2.0.0",
+    "notiflix": "^3.2.6"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.10.0",
+    "buffer": "^6.0.3",
     "parcel": "^2.10.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
-
