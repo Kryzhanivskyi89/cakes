@@ -3,9 +3,9 @@ const submit = document.querySelector('.submit');
 const form = document.querySelector('.form');
 const okMessage = document.querySelector('.ok_message');
 const close = document.querySelector('.btn-close')
+const order = document.querySelector('.order-btn');
 
-
-form.addEventListener('click', function () {
+order.addEventListener('click', function () {
   form.classList.add('active');
 });
 

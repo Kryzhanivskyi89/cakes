@@ -39,20 +39,28 @@
 
 /* Form opened styles */
 
+// .form-head {
+
+// }
+
 .form.active {
-    // position: relative;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    display: block;
+    z-index: 9;
     padding: 24px ;
     background: #6C4A27 ;
     border: 6px solid #CB9A4B ;
     box-shadow: 0px 30px 20px -20px rgba(0, 0, 0, .3) ;
     overflow: hidden ;
-    width: 320px ;
-    height: 380px ;
+    width: 420px ;
+    height: 450px ;
     -webkit-animation: openForm 1.4s ;
     -webkit-animation-timing-function: cubic-bezier(.9, .1, .1, .9) ;
     animation: openForm 1.4s ;
     animation-timing-function: cubic-bezier(.9, .1, .1, .9) ;
-
     &::after,
     &::before {
         opacity: 0;
@@ -69,21 +77,20 @@
 //         }
 // }
     
-.btn-close
-// .mail {
-//     opacity: 0;
-// }
 
-.submit {
+
+.submit,
+.btn-close {
     top: 0 ;
     opacity: 1 ;
     width: 160px ;
     padding: 8px ;
     text-align: center ;
-    margin: 24px auto 0 auto ;
+    margin: 16px auto 0 auto ;
     background: #D1DB82 ;
     cursor: pointer ;
     text-transform: uppercase ;
+    font-size: 16px;
     color: #3E451B ;
     box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, .3),
     0px 1px 0px rgba(255, 255, 255, .5) inset,
@@ -91,8 +98,8 @@
     transition: all 1.1s 1s ease ;
 }
 
-.input,
-.textarea {
+.form-input,
+.form-textarea {
 
     top: 0 ;
     display: block ;
@@ -101,8 +108,8 @@
     padding: 10px ;
     background: #fefefe ;
     margin: 12px 0 0 0 ;
-    font-style: italic ;
-    border: 2px solid #bbb;
+    font-size: 16px;
+    // border: 2px solid #bbb;
 }
 
  .input {
@@ -117,16 +124,15 @@
  }
 
 
-.textarea {
+.form-textarea {
     top: 0;
     opacity: 1 ;
-    max-height: 100px ;
+    max-height: 180px ;
     transition: all .9s 1s ease ;
+    font-size: 16px;
 }
 
-
-
-.h1 {
+.form-head {
     top: 0 ;
     opacity: 1 ;
     text-align: center ;
@@ -137,11 +143,15 @@
     transition: all .3s 1s ease;
 }
 
+
+
+
 /* Form closed styles */
 .form {
     position: absolute;
     top: 50%;
     right: 50%;
+    display: none;
 
     width: 64px ;
     height: 64px ;
