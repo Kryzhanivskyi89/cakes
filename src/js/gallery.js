@@ -6,17 +6,27 @@ const refs = {
 console.log(gallery)
 
 function createCard() {
-    const card = gallery.map(({ id, photo, photo2x, alt, title, description }) => {
+    const card = gallery.map(({ id, deskPhoto, deskPhoto2x, tabPhoto, tabPhoto2x, mobPhoto, mobPhoto2x, alt, title, description }) => {
         return `        
             <li class="card" key=${id}>                
                 
                     <div class="face face1">
                         <div class="content">
                             <picture>
-                                <source srcset="" type="image/webp" />
-                                <source srcset="" type="image/jpeg" />
+                                <source srcset="
+                                    ${deskPhoto} 1x, 
+                                    ${deskPhoto2x} 2x"
+                                    media="(min-width:1200px)"/>
+                                <source srcset="
+                                    ${tabPhoto} 1x, 
+                                    ${tabPhoto2x} 2x" 
+                                    media="(min-width:768px)"/>
+                                <source srcset="
+                                    ${mobPhoto} 1x, 
+                                    ${mobPhoto2x} 2x" 
+                                    media="(max-width:767px)"/>
                                 <img
-                                    src=${photo} 
+                                    src=${deskPhoto} 
                                     alt=${alt} 
                                     style="object-fit: cover;"
                                     crossorigin="anonymous" 
