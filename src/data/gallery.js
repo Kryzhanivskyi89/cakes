@@ -9,8 +9,8 @@ import {desk1x2, g2x2, g3x2, g4x2, g5x2, g6x2, g7x2, g8x2, g9x2, g10x2,
 export const gallery = [
     {
     id: 1,
-    deskPhoto:desk1,
-    deskPhoto2x:desk1x2,
+    // deskPhoto:desk1,
+    // deskPhoto2x:desk1x2,
     // tabPhoto:
     // tabPhoto2x:
     // mobPhoto:
