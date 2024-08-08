@@ -3,8 +3,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
     const form = event.target;
     const formData = new FormData(form);
-    const BASE_URL = 'https://andrew-o1p4.onrender.com'
+    const BASE_URL = 'https://cakes-backend.onrender.com'
     const data = {};
+    console.log(data)
     formData.forEach((value, key) => {
         data[key] = value;
     });
